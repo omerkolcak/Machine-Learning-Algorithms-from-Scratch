@@ -8,9 +8,11 @@
 x = feature, y = target variable, SS = sum of squares, mean = mean(y), n = number of data points, fit = fitted line to the data </br> </br>
 SS(mean) => Sum of squres around the mean : (mean - y)<sup>2</sup> </br>
 Var(mean) => Variation around the mean (average sum of squares per data point) : SS(mean) / n </br>
-Var(fit) => Variation around the least squares line : SS(fit) / n </br>
+Var(fit) => Variation around the least squares line : SS(fit) / n </br> </br>
 If Var(fit) < Var(mean) we can conclude that some of variation is explained the taking feature x into account. </br> </br>
 
 R<sup>2</sup> = (Var(mean) - Var(fit)) / Var(mean) </br>
 R<sup>2</sup> score shows us how much of the variation can be explained by taking feature x into account. </br> 
+For example if R<sup>2</sup> is 0.80, we can say that our fitted line can reduce 80% of the variation.
+#### Drawbacks for R<sup>2<sup>
 ### 3 - Calculate p-value for R^2
