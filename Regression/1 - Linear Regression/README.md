@@ -1,7 +1,8 @@
 # Linear Regression
 ## Resources Used
-* https://www.youtube.com/watch?v=nk2CQITm_eo&list=PLblh5JKOoLUIzaEkCLIUxQFjPIlapw8nU&index=2
-* https://www.youtube.com/watch?v=pkJjoro-b5c&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN&index=19
+* https://www.youtube.com/watch?v=nk2CQITm_eo&list=PLblh5JKOoLUIzaEkCLIUxQFjPIlapw8nU&index=2 (R<sup>2</sup> and F-Statistics)
+* https://www.youtube.com/watch?v=pkJjoro-b5c&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN&index=19 (Gradient Descend) 
+* https://www.youtube.com/watch?v=N20rl2llHno (Degrees of Freedom)
 ## Algorithm
 ### 1 - Gradient Descent with Least Squares
 ### 2 - Calculate R<sup>2</sup> Score
@@ -21,4 +22,8 @@ For example if R<sup>2</sup> is 0.80, we can say that our fitted line can reduce
     * As a result, the more parameters we add to the equation, the more opportunities we have for random events to reduce SS(fit) and result in better R<sup>2</sup>.
   * In order to overcome this issue, "adjusted r<sup>2</sup>" can be used. It scales the R<sup>2</sup> by the number of parameters.
 ### 3 - Calculate p-value for R<sup>2<sup>
-If there are only 2 data points, there is always 1 straight line that connects 2 data points, and this results as 100% R<sup>2</sup> score which is perfect. However, this does not mean anything. We need a way to determine if the R<sup>2</sup> score statistically important. This is p-value. 
+If there are only 2 data points, there is always 1 straight line that connects 2 data points, and this results as 100% R<sup>2</sup> score which is perfect. However, this does not mean anything. We need a way to determine if the R<sup>2</sup> score statistically important. This is p-value by using F-Statistics. 
+p<sub>fit</sub> = number of parameters for fitted line, p<sub>mean</sub> = number of parameters for the mean line
+* First, calculate the F with the following formula: (SS(mean) - SS(fit) / (p<sub>fit</sub> - p<sub>mean</sub>)) / (SS(fit) / (n - p<sub>fit</sub>))
+* Second, using F distribution and F score that is just calculated, find the p-value.
+* If p-value <= 0.05 this indicates that R<sup>2</sup> is statistically significant, else it is not.
