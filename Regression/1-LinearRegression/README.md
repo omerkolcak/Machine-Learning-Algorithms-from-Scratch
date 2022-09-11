@@ -5,7 +5,7 @@
 * https://www.youtube.com/watch?v=N20rl2llHno (Degrees of Freedom)
 ## Algorithm
 ### 1 - Gradient Descent with Least Squares
-![alt text for screen readers](https://github.com/omerkolcak/Machine-Learning-Algorithms-from-Scratch/tree/main/Regression/1%20-%20Linear%20Regression/images/gradient-descend.png "Gradient Descend")
+![alt text for screen readers](https://github.com/omerkolcak/Machine-Learning-Algorithms-from-Scratch/tree/main/Regression/1-LinearRegression/images/gradient-descend.png "Gradient Descend")
 ### 2 - Calculate R<sup>2</sup> Score
 x = feature, y = target variable, SS = sum of squares, mean = mean(y), n = number of data points, fit = fitted line to the data </br> </br>
 SS(mean) => Sum of squres around the mean : (mean - y)<sup>2</sup> </br>
