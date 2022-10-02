@@ -1,8 +1,8 @@
 # Logistic Regression
 ## Resources Used
-https://www.youtube.com/watch?v=t1IT5hZfS48
-https://www.youtube.com/watch?v=TTdcc21Ko9A
-https://www.youtube.com/watch?v=IXPgm1e0IOo
+https://www.youtube.com/watch?v=t1IT5hZfS48 </br>
+https://www.youtube.com/watch?v=TTdcc21Ko9A </br>
+https://www.youtube.com/watch?v=IXPgm1e0IOo </br>
 ## Algorithm
 ### Hyphotesis Function
 m = number of samples, n = number of features, x = training samples in a shape of (n,m), θ = weights in a shape of (n,1) </br>
