@@ -1,6 +1,6 @@
 import sys
 
-sys.path.append("../1 - Decision Tree Regressor")
+sys.path.append("../2 - Decision Tree Regressor")
 
 from DecisionTreeRegressor import *
 
@@ -15,11 +15,27 @@ class RandomForestRegressor():
 
     def fit(self,x,y):
         for i in range(self.number_of_estimators):
-            tree = DecisionTreeRegressor(x,y,min_sample=self.min_sample,max_depth=self.max_depth,number_of_features=self.number_of_features)
+            print(f"Tree {i+1} is being trained...")
+            tree = DecisionTreeRegressor(min_sample=self.min_sample,max_depth=self.max_depth,number_of_features=self.number_of_features)
             
-            tree.fit()
+            x_bootstraped, y_bootstraped = self.__bootstraping(x,y) 
+
+            tree.fit(x_bootstraped,y_bootstraped)
             
             self.trees.append(tree)
+
+    def __bootstraping(self,x,y):
+        number_of_samples = x.shape[0]
+
+        idx = np.random.choice(x.index,number_of_samples,replace=True)
+
+        x = x.loc[idx,:].reset_index(drop=True)
+        y = y.loc[idx,:].reset_index(drop=True)
+
+        x.to_csv("x.csv")
+        y.to_csv("y.csv")
+
+        return x,y
 
     def predict(self,values):
         all_predictions = []
@@ -27,6 +43,6 @@ class RandomForestRegressor():
             all_predictions.append(tree.predict(values))
 
         preds = np.swapaxes(all_predictions,0,1)
-        return np.mean(preds,axis=1)
+        return np.nanmean(preds,axis=1)
 
     

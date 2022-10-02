@@ -14,18 +14,17 @@ class Node():
 
 class DecisionTreeRegressor():
 
-    def __init__(self,x,y,min_sample=1,max_depth=10,number_of_features=None):
-        self.features = x.columns
+    def __init__(self,min_sample=1,max_depth=10,number_of_features=None):
+        self.features = None
         self.number_of_features = number_of_features
         self.root = None
-        self.x = x
-        self.y = y
         self.min_sample = min_sample
         self.max_depth = max_depth
 
 
-    def fit(self):
-        self.root = self.__expand_tree(self.x,self.y,0)
+    def fit(self,x,y):
+        self.features = x.columns
+        self.root = self.__expand_tree(x,y,0)
 
     def predict(self,values):
         result = []
@@ -58,7 +57,7 @@ class DecisionTreeRegressor():
         return Node(feature,threshold,left,right,y,False)
 
     def __find_the_attribute(self,x,y,features,parent_variance):
-        max_variance_reduction = -1
+        max_variance_reduction = -1000
         last_left_indexes = None
         last_right_indexes = None
         threshold = None
