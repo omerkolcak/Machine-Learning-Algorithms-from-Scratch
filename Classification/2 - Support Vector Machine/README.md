@@ -36,10 +36,6 @@ Important to note that SVM maximizes the marigin while seperating the dataset. W
 We can investigate it by fine tuning the parameter C.
 ### Effect of Parameter C
 As it was mentioned earlier, parameter C defines the if the svm acts like hard marigin classifier or soft marigin classifier. Unlike soft marigin, hard marigin has no tolerate on the missclasifications. If we give a huge value to C svm will act as hard marigin, because in order to minimize the loss function algorithm prioritizes the minimization of error term. This led to error term to be equal to zero. On the other hand, if a small values is assigned to C then algorithm can tolerate reasonable amount of missclassifications. Below figures explains this situation visually.
-<p float="left">
-  <img src="images/C_100.png" width="400" />
-  <img src="images/C_1.png" width="400" /> 
-  <img src="images/C_0001.png" width="400" />
-</p>
+<img src="images/C_100.png" width="350" /> <img src="images/C_1.png" width="350" />  <img src="images/C_0001.png" width="350" />
 ### Not Linearly Seperable Data & Usage of Kernels
 ### Effect of Gaussian Kernel Parameters
