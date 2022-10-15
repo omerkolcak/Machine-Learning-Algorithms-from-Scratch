@@ -10,7 +10,7 @@ In order to classify an obervation, we require the following inequalities with a
 our algorithm from large marigin classifier to soft marigin classfier. In the later stpes this will be more clear. </br>
 ![alt text for screen readers](images/pn-samples-eq.png "Classification Requirement") </br>
 If we introduce a new variable called t<sub>i</sub> as 1 if an observation is postive; -1 otherwise, we can combine positive and negative classification 
-formula into 1 single formula. 
+formula into 1 single formula. </br>
 ![alt text for screen readers](images/combine-pn.png "Combined Requirement") </br>
 * If error term equals to 0, then sample is correctly classified and outside the marigin.
 * If error is between the 0 and 1, then sample is correctly classfied and it is inside the marigin.
@@ -20,14 +20,13 @@ Therefore, we can define an error term as follows. </br>
 We want to maximize the marigin by minimizing the norm of the weight. Also, we wanto to minimize the soft marigin error. Therefore, we can define optimization
 objective as follows, with the some constant regularization term C in front of the soft error. </br>
 ![alt text for screen readers](images/optimization-func.png "Optimization Objective") </br>
-Functions on some constraints can be optimized via the method of Lagrange Multipliers.
+Functions on given constraints can be optimized via the method of Lagrange Multipliers.
 #### Method of Lagrange Multipliers
 If the optimization function is rewritten as Lagrange Method required, we get the new following formula. </br>
 ![alt text for screen readers](images/lagrange.png "Lagrange Method") </br>
 After that, if we take the derivatives in terms of all the 4 parameters and set them to 0, we get the following: </br>
 ![alt text for screen readers](images/lagrange-subs.png "Lagrange Derivatives") </br>
-If we substitute the above on the lagrange function, finally we get the following optimization function. It is important to note that final optimization function depends
-on the dot products of pairs of samples. This makes support vector machines so powerful, because we can use transformations on the observations so effectively.
+If we substitute the above on the lagrange function, finally we get the following optimization function. It is important to note that final optimization function only depends on the dot products of pairs of samples. This makes support vector machines so powerful, because we can use transformations on the observations so effectively.
 ![alt text for screen readers](images/final-optimization.png "Final Optimization Objective") </br>
 ### Linearly Seperable Data
 ### Effect of Parameter C
