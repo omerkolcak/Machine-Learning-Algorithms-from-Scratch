@@ -36,6 +36,7 @@ Important to note that SVM maximizes the marigin while seperating the dataset. W
 We can investigate it by fine tuning the parameter C.
 ### Effect of Parameter C
 As it was mentioned earlier, parameter C defines the if the svm acts like hard marigin classifier or soft marigin classifier. Unlike soft marigin, hard marigin has no tolerate on the missclasifications. If we give a huge value to C svm will act as hard marigin, because in order to minimize the loss function algorithm prioritizes the minimization of error term. This led to error term to be equal to zero. On the other hand, if a small values is assigned to C then algorithm can tolerate reasonable amount of missclassifications. Below figures explains this situation visually.
-<img src="images/C_100.png" width="350" /> <img src="images/C_1.png" width="350" />  <img src="images/C_0001.png" width="350" />
+<img src="images/C_100.png" width="300" /> <img src="images/C_1.png" width="300" />  <img src="images/C_0001.png" width="300" />
 ### Not Linearly Seperable Data & Usage of Kernels
+Some dataset are impossible to seperate linearly. We can apply some kind of transformations on dataset and get new features. Based on these new features we can perform the classification. These transformations is achived by the help of kernel functions. Some of the most popular kernel functions are gaussian kernels, polynomial kernels, sigmoid kernels. 
 ### Effect of Gaussian Kernel Parameters
