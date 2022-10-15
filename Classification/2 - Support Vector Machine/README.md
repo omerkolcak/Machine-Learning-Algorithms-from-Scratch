@@ -15,6 +15,7 @@ formula into 1 single formula. </br>
 * If error term equals to 0, then sample is correctly classified and outside the marigin.
 * If error is between the 0 and 1, then sample is correctly classfied and it is inside the marigin.
 * If error is greater than 1, then it is missclassified. </br>
+</br>
 Therefore, we can define an error term as follows. </br>
 ![alt text for screen readers](images/soft-marigin-error.png "Soft Marigin Error") </br>
 We want to maximize the marigin by minimizing the norm of the weight. Also, we wanto to minimize the soft marigin error. Therefore, we can define optimization
@@ -29,6 +30,11 @@ After that, if we take the derivatives in terms of all the 4 parameters and set 
 If we substitute the above on the lagrange function, finally we get the following optimization function. It is important to note that final optimization function only depends on the dot products of pairs of samples. This makes support vector machines so powerful, because we can use transformations on the observations so effectively.
 ![alt text for screen readers](images/final-optimization.png "Final Optimization Objective") </br>
 ### Linearly Seperable Data
+By optimazing the above function, a linearly seperable data can be seperated as bellow. 
+![alt text for screen readers](images/linear-data.png "Linearly Seperable Data") </br>
+Important to note that SVM maximizes the marigin while seperating the dataset. What happens if we add an outlier to the same dataset?
+![alt text for screen readers](images/outlier-dataset.png "Outlier") </br>
+We can investigate it by fine tuning the parameter C.
 ### Effect of Parameter C
 ### Not Linearly Seperable Data & Usage of Kernels
 ### Effect of Gaussian Kernel Parameters
