@@ -26,7 +26,7 @@ If the optimization function is rewritten as Lagrange Method required, we get th
 ![alt text for screen readers](images/lagrange.png "Lagrange Method") </br>
 After that, if we take the derivatives in terms of all the 4 parameters and set them to 0, we get the following: </br>
 ![alt text for screen readers](images/lagrange-subs.png "Lagrange Derivatives") </br>
-If we substitute the above on the lagrange function, finally we get the following optimization function. It is important to note that final optimization function only depends on the dot products of pairs of samples. This makes support vector machines so powerful, because we can use transformations on the observations so effectively.
+If we substitute the above on the lagrange function, finally we get the following optimization function. It is important to note that final optimization function only depends on the dot products of pairs of samples. This makes support vector machines so powerful, because we can use transformations on the observations so effectively. </br>
 ![alt text for screen readers](images/final-optimization.png "Final Optimization Objective") </br>
 ### Linearly Seperable Data
 By optimazing the above function, a linearly seperable data can be seperated as bellow. 
@@ -35,5 +35,9 @@ Important to note that SVM maximizes the marigin while seperating the dataset. W
 ![alt text for screen readers](images/outlier-dataset.png "Outlier") </br>
 We can investigate it by fine tuning the parameter C.
 ### Effect of Parameter C
+As it was mentioned earlier, parameter C defines the if the svm acts like hard marigin classifier or soft marigin classifier. Unlike soft marigin, hard marigin has no tolerate on the missclasifications. If we give a huge value to C svm will act as hard marigin, because in order to minimize the loss function algorithm prioritizes the minimization of error term. This led to error term to be equal to zero. On the other hand, if a small values is assigned to C then algorithm can tolerate reasonable amount of missclassifications. Below figures explains this situation visually.
+![alt text for screen readers](images/C_100.png "C = 100")
+![alt text for screen readers](images/C_1.png "C = 1")
+![alt text for screen readers](images/C_0001.png "C = 0.001")
 ### Not Linearly Seperable Data & Usage of Kernels
 ### Effect of Gaussian Kernel Parameters
