@@ -7,14 +7,14 @@ hyperplane is as following: </br>
 ![alt text for screen readers](images/hyperplane-formula.png "Hyperplane Formula") </br>
 ### Mathematical Derivation of Optimization Function
 In order to classify an obervation, we require the following inequalities with an additional error term that gives more flexibility for our model. That transforms
-our algorithm from large mar,gin classifier to soft marigin classfier. In the later stpes this will be more clear. </br>
-![alt text for screen readers](images/pn-samples.png "Classification Requirement") </br>
+our algorithm from large marigin classifier to soft marigin classfier. In the later stpes this will be more clear. </br>
+![alt text for screen readers](images/pn-samples-eq.png "Classification Requirement") </br>
 If we introduce a new variable called t<sub>i</sub> as 1 if an observation is postive; -1 otherwise, we can combine positive and negative classification 
 formula into 1 single formula. 
 ![alt text for screen readers](images/combine-pn.png "Combined Requirement") </br>
 * If error term equals to 0, then sample is correctly classified and outside the marigin.
 * If error is between the 0 and 1, then sample is correctly classfied and it is inside the marigin.
-* If error is greater than 1, then it is missclassified.
+* If error is greater than 1, then it is missclassified. </br>
 Therefore, we can define an error term as follows. </br>
 ![alt text for screen readers](images/soft-marigin-error.png "Soft Marigin Error") </br>
 We want to maximize the marigin by minimizing the norm of the weight. Also, we wanto to minimize the soft marigin error. Therefore, we can define optimization
