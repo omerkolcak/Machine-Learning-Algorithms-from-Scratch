@@ -15,7 +15,6 @@ formula into 1 single formula. </br>
 * If error term equals to 0, then sample is correctly classified and outside the marigin.
 * If error is between the 0 and 1, then sample is correctly classfied and it is inside the marigin.
 * If error is greater than 1, then it is missclassified. </br>
-</br>
 Therefore, we can define an error term as follows. </br>
 ![alt text for screen readers](images/soft-marigin-error.png "Soft Marigin Error") </br>
 We want to maximize the marigin by minimizing the norm of the weight. Also, we wanto to minimize the soft marigin error. Therefore, we can define optimization
