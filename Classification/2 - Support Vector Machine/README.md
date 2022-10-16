@@ -14,7 +14,8 @@ formula into 1 single formula. </br>
 ![alt text for screen readers](images/combine-pn.png "Combined Requirement") </br>
 * If error term equals to 0, then sample is correctly classified and outside the marigin.
 * If error is between the 0 and 1, then sample is correctly classfied and it is inside the marigin.
-* If error is greater than 1, then it is missclassified. </br>
+* If error is greater than 1, then it is missclassified.
+
 Therefore, we can define an error term as follows. </br>
 ![alt text for screen readers](images/soft-marigin-error.png "Soft Marigin Error") </br>
 We want to maximize the marigin by minimizing the norm of the weight. Also, we wanto to minimize the soft marigin error. Therefore, we can define optimization
@@ -38,5 +39,9 @@ We can investigate it by fine tuning the parameter C.
 As it was mentioned earlier, parameter C defines the if the svm acts like hard marigin classifier or soft marigin classifier. Unlike soft marigin, hard marigin has no tolerate on the missclasifications. If we give a huge value to C svm will act as hard marigin, because in order to minimize the loss function algorithm prioritizes the minimization of error term. This led to error term to be equal to zero. On the other hand, if a small values is assigned to C then algorithm can tolerate reasonable amount of missclassifications. Below figures explains this situation visually.
 <img src="images/C_100.png" width="300" /> <img src="images/C_1.png" width="300" />  <img src="images/C_0001.png" width="300" />
 ### Not Linearly Seperable Data & Usage of Kernels
-Some dataset are impossible to seperate linearly. We can apply some kind of transformations on dataset and get new features. Based on these new features we can perform the classification. These transformations is achived by the help of kernel functions. Some of the most popular kernel functions are gaussian kernels, polynomial kernels, sigmoid kernels. 
+Some dataset are impossible to seperate linearly. We can apply some kind of transformations on dataset and get new features. Based on these new features we can perform the classification. These transformations is achived by the help of kernel functions. Some of the most popular kernel functions are gaussian kernels, polynomial kernels, sigmoid kernels. Gaussian functions is as below.
+![alt text for screen readers](images/gaussian-kernel.png "Gaussian Kernel") </br>
+Gaussian kernel measures the similarity between two observation. If two points are very similar output of the gaussian function is close to 1, otherwise it is close to 0. If 2 points are very similar then difference of those 2 points is close to 0 and e<sup>\\approx0</sup> \\approx 1. If 2 points are very different then difference of those 2 poinst is close to \infty and e<sup>\\approx -\infty </sup> \\approx 0. Also, gaussian function has the user defined parametter σ. It's effect will be investigated on the later step.
+Kernel functions are applied between all of the observations. Therefore, if the dataset shape is (m,n), after the kernel transformation shape becomes (m,m). SVM with the gaussian kernel on the non linearly seperable data is as below figure.
+![alt text for screen readers](images/non-linear-data.png "Non Linear Data Decision Boundary") </br>
 ### Effect of Gaussian Kernel Parameters
