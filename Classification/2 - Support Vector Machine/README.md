@@ -45,8 +45,9 @@ Gaussian kernel measures the similarity between two observation. If two points a
 Kernel functions are applied between all of the observations. Therefore, if the dataset shape is (m,n), after the kernel transformation shape becomes (m,m). SVM with the gaussian kernel on the non linearly seperable data is as below figure.
 ![alt text for screen readers](images/non-linear-data.png "Non Linear Data Decision Boundary") </br>
 ### Effect of Gaussian Kernel Parameters
-If we draw the function of gaussian kernel for the point x = 2 on different σ values, we get the following graphs.
+If we draw the function of gaussian kernel for the point x = 2 on different σ values, we get the following graphs. When x = 2 gaussian function equals to 1.
 <img src="images/gamma_01.png" width="400" /> <img src="images/gamma_1.png" width="400" /> 
-For the large values of σ, gaussian function vary more smoothly, and for the small values for σ, gaussian function vary less smoothly. Therefore, larger the σ value svm is more prone to underfitting(lower bias, high variance, smaller the σ value svm is more prone to overfitting(low bias, high variance). </br>
+
+For the large values of σ, gaussian function vary more smoothly, and for the small values for σ, gaussian function vary less smoothly. Therefore, larger the σ value svm is more prone to underfitting(lower bias, high variance), smaller the σ value svm is more prone to overfitting(low bias, high variance). </br>
 We can observe the training and testing accuracy on the breast cancer dataset for different σ values. </br>
 ![alt text for screen readers](images/gamma-effect.png "Effect of Gamma") </br>
