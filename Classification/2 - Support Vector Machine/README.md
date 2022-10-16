@@ -1,11 +1,12 @@
 # Support Vector Machine
 ## Resources
-https://www.youtube.com/watch?v=_PwhiWxHK8o&list=PLUl4u3cNGP63gFHB6xb-kVBiQHYe_4hSi&index=18 (Mathematical Dervation of SVM)
-https://www.khanacademy.org/math/multivariable-calculus/applications-of-multivariable-derivatives/lagrange-multipliers-and-constrained-optimization/v/the-lagrangian (Lagrange Multipliers)
-https://www.youtube.com/watch?v=mTyT-oHoivA (Kernels)
-https://www.youtube.com/watch?v=XfyR_49hfi8 (Kernels)
-https://machinelearningmastery.com/method-of-lagrange-multipliers-the-theory-behind-support-vector-machines-part-2-the-non-separable-case (Math for SVM)
-https://machinelearningmastery.com/method-of-lagrange-multipliers-the-theory-behind-support-vector-machines-part-3-implementing-an-svm-from-scratch-in-python/ (Implementation of SVM)
+* https://www.youtube.com/watch?v=_PwhiWxHK8o&list=PLUl4u3cNGP63gFHB6xb-kVBiQHYe_4hSi&index=18 (Mathematical Dervation of SVM)
+* https://www.khanacademy.org/math/multivariable-calculus/applications-of-multivariable-derivatives/lagrange-multipliers-and-constrained-optimization/v/the-lagrangian (Lagrange Multipliers)
+* https://www.youtube.com/watch?v=mTyT-oHoivA (Kernels)
+* https://www.youtube.com/watch?v=XfyR_49hfi8 (Kernels)
+* https://machinelearningmastery.com/method-of-lagrange-multipliers-the-theory-behind-support-vector-machines-part-2-the-non-separable-case (Math for SVM)
+* https://machinelearningmastery.com/method-of-lagrange-multipliers-the-theory-behind-support-vector-machines-part-3-implementing-an-svm-from-scratch-in-python/ (Implementation of SVM)
+
 ## Algorithm
 Basically, support vector machine aims to seperate the data with the hyperplanes by maximazing the mariginal distance. 
 This mariginal distance is defined as the nearest observations to the hyperplane. Also, this observations are called as support vectors. Formula of the
