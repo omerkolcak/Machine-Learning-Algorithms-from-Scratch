@@ -17,7 +17,7 @@ Even though the random forest is a bagging ensemble technique, having a rudiment
 learners are trained on the dataset where missclassified samples are highly prioritized. Aim is reducing the high bias.
 ## Random Forest Steps
 * Create bootstrapped datasets
-* Train each decision trees on bootstrapped dataset by considering random subset of features (independent variables)
+* Train each decision tree on bootstrapped dataset by considering random subset of features (independent variables)
 * Make predicitons by majority voting (aggregation)
 
 Training decision trees on bootstrapped datasets by considering random subset of features results wide variety of trees. Having the wide variety of trees, and combining
