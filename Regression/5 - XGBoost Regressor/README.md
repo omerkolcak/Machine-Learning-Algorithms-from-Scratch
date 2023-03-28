@@ -17,13 +17,13 @@ is calculated based on the similarity scores. A similarity score can be calculat
 
 <img src="images/similarity-score.png"> 
 
-where &lambda is regularization parameter. Overall gain from the parent node can be calculated as follows:
+where &lambda; is regularization parameter. Overall gain from the parent node can be calculated as follows:
 
 <img src="images/gain.png">
 
-Also, there is &gamma parameter. If gain is smaller than this &gamma threshold, we prune that branch. &lambda and &gamma hyperparameters can be used to control the overfitting.
-If &lambda is a big value, than the similarity scores becomes smaller and there is a higher chance to gain being smaller than the &gamma value. Also, it is same for the 
-&gamma, higher the &gamma there is higher chance to gain being smaller than the &gamma value. The prediction output for a single leaf is as below:
+Also, there is &gamma; parameter. If gain is smaller than this &gamma; threshold, we prune that branch. &lambda; and &gamma; hyperparameters can be used to control the overfitting.
+If &lambda; is a big value, than the similarity scores becomes smaller and there is a higher chance to gain being smaller than the &gamma; value. Also, it is same for the 
+&gamma;, higher the &gamma; there is higher chance to gain being smaller than the &gamma; value. The prediction output for a single leaf is as below:
 
 <img src="images/output-value.png">
 
@@ -31,7 +31,7 @@ The overall prediction for the XGBoost regressor is as following:
 
 <img src="images/prediction.png">
 
-where &eta is learning rate, K is the number of trees, and f<sub>k</sub>(x<sub>i</sub>).
+where &eta; is learning rate, K is the number of trees, and f<sub>k</sub>(x<sub>i</sub>).
 
 The mathematical derivations of the formulas can be studied further by following these great sources down below. 
 
