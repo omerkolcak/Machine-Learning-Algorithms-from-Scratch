@@ -5,7 +5,7 @@ def calculate_similarity_score(residuals,regularization_lambda):
     """
     This function calculates the similarity score for given residuals and regularization parameter.
     """
-    return np.sum(residuals**2).item() / (residuals.shape[0] + regularization_lambda)
+    return (np.sum(residuals)**2).item() / (residuals.shape[0] + regularization_lambda)
 
 class Node():
 
