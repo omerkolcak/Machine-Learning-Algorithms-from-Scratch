@@ -31,7 +31,7 @@ The overall prediction for the XGBoost regressor is as following:
 
 <img src="images/prediction.png">
 
-where &eta; is learning rate, K is the number of trees, and f<sub>k</sub>(x<sub>i</sub>).
+where &eta; is learning rate, K is the number of trees, and f<sub>k</sub>(x<sub>i</sub>) is output value for kth tree.
 
 The mathematical derivations of the formulas can be studied further by following these great sources down below. 
 
