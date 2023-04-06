@@ -21,6 +21,14 @@ It is important to apply mean normalization and feature scaling before applying 
 
 - Scale the features
 - Calculate the covariance matrix: &Sigma; = $\X^T * X / m$
-- Calculate eigen vectors of &Sigma; by singular value decomposition: U,S,V = SVD( &Sigma;)
-- Get the k principal components U_{reduce} = U[:k]
-- Calculate the transformed data: Z = $\U_{reduce}^T * X
+- Calculate eigen vectors of &Sigma; by singular value decomposition: U,S,V = SVD(&Sigma;)
+- Get the k principal components U_{reduced} = U[:k]
+- Calculate the transformed data: Z = $\U_{reduced}^T * X$
+
+A simple PCA result of breast cancer dataset is as below. Dimension is reduced from 30 to 2.
+
+<img src="images/pca-breast-cancer.png">
+
+## Resources
+https://www.youtube.com/playlist?list=PLl9TabrCI60Oa5hSWnYmaMuBexbUO95Ps (PCA)
+https://www.analyticsvidhya.com/blog/2021/09/pca-and-its-underlying-mathematical-principles/
