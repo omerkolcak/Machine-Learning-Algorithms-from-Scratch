@@ -20,10 +20,10 @@ The basic idea behind the PCA is that it tries to minimize the average squared p
 It is important to apply mean normalization and feature scaling before applying PCA, since different scales of variables can dominate the projection error. Although mathematical derivation of the PCA is complex, the below steps can be followed:
 
 - Scale the features
-- Calculate the covariance matrix: &Sigma; = $\X^T * X / m$
+- Calculate the covariance matrix: &Sigma; = $X^T * X / m$
 - Calculate eigen vectors of &Sigma; by singular value decomposition: U,S,V = SVD(&Sigma;)
 - Get the k principal components U_{reduced} = U[:k]
-- Calculate the transformed data: Z = $\U_{reduced}^T * X$
+- Calculate the transformed data: Z = $U_{reduced}^T * X$
 
 A simple PCA result of breast cancer dataset is as below. Dimension is reduced from 30 to 2.
 
