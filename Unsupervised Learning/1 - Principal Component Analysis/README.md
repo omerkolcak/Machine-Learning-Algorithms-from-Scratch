@@ -13,5 +13,14 @@ machine learning algorithm to train more quickly.
 becomes easier to visualize.
 
 ## Algorithm
-The basic idea behind the PCA is that it tries to minimize the projection error. The projection error is the sum of orthogonal distances to the principal component for 
-each observation. The projection error is as below:
+The basic idea behind the PCA is that it tries to minimize the average squared projection error. The projection error is the sum of orthogonal distances to the principal component for each observation. The squared projection error is as below:
+
+<img src="images/projection-error.png">
+
+It is important to apply mean normalization and feature scaling before applying PCA, since different scales of variables can dominate the projection error. Although mathematical derivation of the PCA is complex, the below steps can be followed:
+
+- Scale the features
+- Calculate the covariance matrix: &Sigma; = $\X^T * X / m$
+- Calculate eigen vectors of &Sigma; by singular value decomposition: U,S,V = SVD( &Sigma;)
+- Get the k principal components U_{reduce} = U[:k]
+- Calculate the transformed data: Z = $\U_{reduce}^T * X
