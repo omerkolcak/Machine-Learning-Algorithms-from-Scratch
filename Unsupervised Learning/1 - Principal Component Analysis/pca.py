@@ -7,11 +7,11 @@ class PCA():
         self.k = k
     
     def fit_transform(self,X):
-        # feature scaling
+        # mean normalization and feature scaling
         X_normalized = (X - np.mean(X,axis=0)) / X.std(axis=0)
         # calculate covariance matrix
         m = X.shape[0]
-        covariance_matrix = np.dot(X_normalized.T,X_normalized)
+        covariance_matrix = np.dot(X_normalized.T,X_normalized) / m
         # calculate singular value decomposition
         u,s,v = np.linalg.svd(covariance_matrix)
         
