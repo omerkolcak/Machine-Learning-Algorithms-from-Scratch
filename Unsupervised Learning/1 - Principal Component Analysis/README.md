@@ -30,5 +30,5 @@ A simple PCA result of breast cancer dataset is as below. Dimension is reduced f
 <img src="images/pca-breast-cancer.png">
 
 ## Resources
-https://www.youtube.com/playlist?list=PLl9TabrCI60Oa5hSWnYmaMuBexbUO95Ps (PCA)
-https://www.analyticsvidhya.com/blog/2021/09/pca-and-its-underlying-mathematical-principles/
+- https://www.youtube.com/playlist?list=PLl9TabrCI60Oa5hSWnYmaMuBexbUO95Ps (PCA)
+- https://www.analyticsvidhya.com/blog/2021/09/pca-and-its-underlying-mathematical-principles/
